@@ -22,15 +22,54 @@
               font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif}
 
     /* ------ split layout ------ */
-    body{display:flex;height:100vh}
-    .left-side{width:35%;min-width:320px;background:var(--light-bg);
-               padding:var(--spacing-lg);display:flex;overflow:hidden}
-    .right-side{flex:1;position:fixed;top:0;right:0;height:100vh;overflow:hidden}
-    .right-side img{width:100%;height:100%;object-fit:contain;object-position:center}
+    body{
+      display:flex;
+      height:100vh;
+      position: relative;
+    }
+
+    /* Background image container */
+    .right-side{
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+    .right-side img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    /* Text content container */
+    .left-side{
+      width:33%;
+      min-width:320px;
+      background: rgba(255, 255, 255, 0.75);
+      backdrop-filter: blur(4px);
+      padding:var(--spacing-lg) 0 0 var(--spacing-lg);
+      display:flex;
+      overflow:visible;
+      flex-direction: column;
+      position: relative;
+      z-index: 2;
+    }
 
     /* ------ column ------- */
-    .page-wrapper{max-width:460px;width:100%;margin:auto;display:flex;
-                  flex-direction:column;height:100%}
+    .page-wrapper{
+      max-width:460px;
+      width:100%;
+      margin:0 auto;
+      display:flex;
+      flex-direction:column;
+      height:100%;
+      padding-right: var(--spacing-lg);
+      overflow-y: auto;
+    }
+
     .header{display:flex;justify-content:center;margin-bottom:var(--spacing-xs)}
     .logo{width:100%;height:auto}
 
@@ -40,8 +79,7 @@
       display:flex;
       flex-direction:column;
       justify-content:space-between;
-      overflow-y: auto;
-      padding-right: var(--spacing-sm);
+      padding-bottom: var(--spacing-lg);
     }
 
     .brand   {font:600 1.05rem/1 var(--font);text-align:center;margin:0}
@@ -121,8 +159,8 @@
       flex-direction:column;
       align-items:center;
       margin-top:var(--spacing-lg);
-      margin-bottom:var(--spacing-lg);
-      padding-top:var(--spacing-lg);
+      margin-bottom:var(--spacing-md);
+      padding-top:var(--spacing-md);
     }
     
     .button{
@@ -135,19 +173,38 @@
       font-size:.85rem;
       cursor:pointer;
       transition:.2s;
-      text-align:center
+      text-align:center;
+      margin-bottom: var(--spacing-md);
     }
     
     .button:hover{background:var(--primary-dark);transform:translateY(-2px)}
 
-    footer{font-size:.75rem;text-align:center;color:#666;margin-top:var(--spacing-xs)}
+    footer{
+      font-size:.75rem;
+      text-align:center;
+      color:#666;
+      margin-top:var(--spacing-xs);
+      padding-bottom: var(--spacing-md);
+    }
 
     /* mobile */
     @media(max-width:768px){
       body{flex-direction:column}
-      .left-side{width:100%;order:2;height:auto;overflow:auto;
-                 padding:var(--spacing-lg)}
-      .right-side{position:relative;width:100%;order:1;height:240px}
+      .left-side{
+        width:100%;
+        height:100%;
+        padding:var(--spacing-lg);
+        background: rgba(255, 255, 255, 0.75);
+        backdrop-filter: blur(4px);
+      }
+      .right-side{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+      }
       .logo{max-width:240px}
       .button{width:100%}
     }
@@ -155,8 +212,8 @@
     /* iPad Safari fix: more transparent and z-index fix */
     @media screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
       .left-side {
-        background-color: rgba(255, 255, 255, 0.85) !important;
-        backdrop-filter: saturate(180%) blur(4px);
+        background-color: rgba(255, 255, 255, 0.75) !important;
+        backdrop-filter: blur(4px);
         z-index: 2;
         position: relative;
       }
@@ -251,9 +308,9 @@
 
     <h1>Bespoke Shipping Container Conversions | ISOv8 by ContainerKing®</h1>
 
-    <p>At <strong>ISOv8.co.uk</strong>, we design and manufacture <strong>bespoke shipping container conversions</strong> for businesses across the UK. As a specialist sub-brand of <strong>ContainerKing® Limited</strong>, we’re proud to deliver <strong>high-quality portable buildings</strong> built from <strong>new and used ISO containers</strong>, tailored to the needs of forward-thinking organisations.</p>
+    <p>At <strong>ISOv8.co.uk</strong>, we design and manufacture <strong>bespoke shipping container conversions</strong> for businesses across the UK. As a specialist sub-brand of <strong>ContainerKing® Limited</strong>, we're proud to deliver <strong>high-quality portable buildings</strong> built from <strong>new and used ISO containers</strong>, tailored to the needs of forward-thinking organisations.</p>
 
-    <p>From our base in <strong>Scunthorpe</strong>, we regularly supply to clients across <strong>Lincolnshire, Yorkshire and Humberside</strong>, but we also serve businesses throughout <strong>England, Scotland, and Wales</strong>. Whether you’re a local business or a national enterprise, we offer expert guidance, fast turnaround, and reliable UK-wide delivery.</p>
+    <p>From our base in <strong>Scunthorpe</strong>, we regularly supply to clients across <strong>Lincolnshire, Yorkshire and Humberside</strong>, but we also serve businesses throughout <strong>England, Scotland, and Wales</strong>. Whether you're a local business or a national enterprise, we offer expert guidance, fast turnaround, and reliable UK-wide delivery.</p>
 
     <p>We supply:</p>
     <ul>

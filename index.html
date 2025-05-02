@@ -22,9 +22,20 @@
 
     /* ------ split layout ------ */
     body{display:flex;height:100vh}
-    .left-side{width:35%;min-width:320px;background:var(--light-bg);
-               padding:var(--spacing-lg);display:flex;overflow:hidden}
-    .right-side{flex:1;position:fixed;top:0;right:0;height:100vh;overflow:hidden}
+    .left-side{
+      width:35%;min-width:320px;background:var(--light-bg);
+      padding:var(--spacing-lg);display:flex;overflow:hidden;
+
+      /* keep text panel above the fixed image */
+      position:relative;
+      z-index:2;
+    }
+    .right-side{
+      flex:1;position:fixed;top:0;right:0;height:100vh;overflow:hidden;
+
+      /* sit behind the text panel */
+      z-index:1;
+    }
     .right-side img{width:100%;height:100%;object-fit:contain;object-position:center}
 
     /* ------ column ------- */
@@ -235,30 +246,31 @@
     <img src="bg.jpg" alt="isoV8 Container Conversion">
   </div>
 </body>
-  <!-- Hidden SEO content – off-screen, so it has zero effect on layout -->
-  <div style="position:absolute; left:-9999px; top:-9999px;">
 
-    <h1>Bespoke Shipping Container Conversions | ISOv8 by ContainerKing®</h1>
+<!-- Hidden SEO content – off-screen, so it has zero effect on layout -->
+<div style="position:absolute; left:-9999px; top:-9999px;">
 
-    <p>At <strong>ISOv8.co.uk</strong>, we design and manufacture <strong>bespoke shipping container conversions</strong> for businesses across the UK. As a specialist sub-brand of <strong>ContainerKing® Limited</strong>, we’re proud to deliver <strong>high-quality portable buildings</strong> built from <strong>new and used ISO containers</strong>, tailored to the needs of forward-thinking organisations.</p>
+  <h1>Bespoke Shipping Container Conversions | ISOv8 by ContainerKing®</h1>
 
-    <p>From our base in <strong>Scunthorpe</strong>, we regularly supply to clients across <strong>Lincolnshire, Yorkshire and Humberside</strong>, but we also serve businesses throughout <strong>England, Scotland, and Wales</strong>. Whether you’re a local business or a national enterprise, we offer expert guidance, fast turnaround, and reliable UK-wide delivery.</p>
+  <p>At <strong>ISOv8.co.uk</strong>, we design and manufacture <strong>bespoke shipping container conversions</strong> for businesses across the UK. As a specialist sub-brand of <strong>ContainerKing® Limited</strong>, we’re proud to deliver <strong>high-quality portable buildings</strong> built from <strong>new and used ISO containers</strong>, tailored to the needs of forward-thinking organisations.</p>
 
-    <p>We supply:</p>
-    <ul>
-      <li><strong>Shipping container offices</strong> with full insulation, lining, and electric fit-outs</li>
-      <li><strong>Customised workshops and canteens</strong> designed to meet daily operational needs</li>
-      <li><strong>Acoustically treated and soundproofed containers</strong> for studios, therapy, or wellbeing spaces</li>
-      <li><strong>Portable meeting rooms</strong>, training spaces, and modular classroom pods</li>
-      <li><strong>Luxury interior finishes</strong> including high-spec fabrics, vinyl flooring, and LED lighting</li>
-      <li><strong>Single-phase or three-phase electrics</strong>, custom sockets, and heating installations</li>
-      <li><strong>Clad containers</strong> for enhanced appearance and insulation performance</li>
-    </ul>
+  <p>From our base in <strong>Scunthorpe</strong>, we regularly supply to clients across <strong>Lincolnshire, Yorkshire and Humberside</strong>, but we also serve businesses throughout <strong>England, Scotland, and Wales</strong>. Whether you’re a local business or a national enterprise, we offer expert guidance, fast turnaround, and reliable UK-wide delivery.</p>
 
-    <p>Our container buildings are ideal for entrepreneurs, SMEs, construction companies, education providers, wellness brands, and corporate HQs. Every unit is designed with durability, comfort, and professional appearance in mind.</p>
+  <p>We supply:</p>
+  <ul>
+    <li><strong>Shipping container offices</strong> with full insulation, lining, and electric fit-outs</li>
+    <li><strong>Customised workshops and canteens</strong> designed to meet daily operational needs</li>
+    <li><strong>Acoustically treated and soundproofed containers</strong> for studios, therapy, or wellbeing spaces</li>
+    <li><strong>Portable meeting rooms</strong>, training spaces, and modular classroom pods</li>
+    <li><strong>Luxury interior finishes</strong> including high-spec fabrics, vinyl flooring, and LED lighting</li>
+    <li><strong>Single-phase or three-phase electrics</strong>, custom sockets, and heating installations</li>
+    <li><strong>Clad containers</strong> for enhanced appearance and insulation performance</li>
+  </ul>
 
-    <h2>Popular search terms:</h2>
-    <p>shipping container conversions UK, portable buildings for sale, container offices, converted shipping containers, container meeting rooms, modular site buildings, Scunthorpe portable buildings, Yorkshire container conversions, Lincolnshire shipping containers, Humberside portable offices, soundproof container rooms, acoustic container studios, bespoke site cabins, luxury portable workspace, high-spec container conversion.</p>
+  <p>Our container buildings are ideal for entrepreneurs, SMEs, construction companies, education providers, wellness brands, and corporate HQs. Every unit is designed with durability, comfort, and professional appearance in mind.</p>
 
-  </div>
+  <h2>Popular search terms:</h2>
+  <p>shipping container conversions UK, portable buildings for sale, container offices, converted shipping containers, container meeting rooms, modular site buildings, Scunthorpe portable buildings, Yorkshire container conversions, Lincolnshire shipping containers, Humberside portable offices, soundproof container rooms, acoustic container studios, bespoke site cabins, luxury portable workspace, high-spec container conversion.</p>
+
+</div>
 </html>
